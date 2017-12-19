@@ -1,3 +1,1 @@
-
-// if ubuntu: copy i3 config
-
+mkdir ~/.config && cp config ~/.config
