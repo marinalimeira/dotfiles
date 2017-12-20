@@ -5,6 +5,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'mattn/emmet-vim'
 Plug 'godlygeek/tabular'
 Plug 'easymotion/vim-easymotion'
+"Plug 'justinmk/vim-dirvish'
 
 " live markdown - use :LivedownToggle to launch/kill
 Plug 'shime/vim-livedown'
@@ -44,7 +45,7 @@ set nowb
 " Indentation
 set autoindent
 set smartindent
-set smarttab
+set smartcase
 
 " Disabling arrow keys
 noremap <Left> :echoe "Use h"<CR>
@@ -84,8 +85,3 @@ let g:loaded_gzip = 1
 let g:loaded_tarPlugin = 1 " May cause problems with fireplace
 let g:loaded_zipPlugin = 1
 let g:loaded_netrwPlugin = 1
-
-" vim-clojure-static config
-let g:clojure_maxlines = 0
-let g:clojure_align_multiline_strings = 1
-let g:clojure_align_subforms = 0
