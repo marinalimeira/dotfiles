@@ -6,6 +6,8 @@ Plug 'mattn/emmet-vim'
 Plug 'godlygeek/tabular'
 Plug 'easymotion/vim-easymotion'
 "Plug 'justinmk/vim-dirvish'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " live markdown - use :LivedownToggle to launch/kill
 Plug 'shime/vim-livedown'
@@ -14,6 +16,8 @@ Plug 'shime/vim-livedown'
 Plug 'guns/vim-sexp', { 'for': 'clojure' }
 Plug 'clojure-vim/acid.nvim'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'fholiveira/vim-clojure-static', { 'for': 'clojure', 'branch': 'hack-update'} " Static stuff
 Plug 'hkupty/async-clj-highlight', { 'for': 'clojure', 'branch': 'acid-autocmd' } " Highlight with acid
 
