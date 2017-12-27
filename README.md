@@ -15,7 +15,7 @@ I use this repo to install/manage dependencies on Ubuntu and macOS :)
 
 Besides i3wm, configuration for ubuntu and macOS are the same, you can check them on `/config`.
 
-`./config.sh` will copy `config/` into `~/.config`.
+`./config.sh` will create a link to nvim config in `config/` to `~/.config`.
 
 ### Source Code Pro
 Source code at [Github](https://github.com/adobe-fonts/source-code-pro) and download from [FontLibrary](https://fontlibrary.org/en/font/source-code-pro).
@@ -25,4 +25,15 @@ git config --global user.name “Marina Limeira”
 git config --global user.email “marinaflessa@gmail.com”
 ^ask for user input?	
 
+### nvim
 
+Install Vim Plug:
+```
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+And then, `:PlugInstall`
+
+Acid install instructions: (for clojure dev)
+https://github.com/clojure-vim/acid.nvim#installing
