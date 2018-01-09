@@ -14,12 +14,13 @@ Plug 'shime/vim-livedown'
 
 " clojure plugins
 Plug 'guns/vim-sexp', { 'for': 'clojure' }
-Plug 'clojure-vim/acid.nvim'
+Plug 'clojure-vim/acid.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'fholiveira/vim-clojure-static', { 'for': 'clojure', 'branch': 'hack-update'} " Static stuff
 Plug 'hkupty/async-clj-highlight', { 'for': 'clojure', 'branch': 'acid-autocmd' } " Highlight with acid
+Plug 'fuadsaud/vim-midje', { 'branch': 'fix-lispwords' }
 
 call plug#end()
 
