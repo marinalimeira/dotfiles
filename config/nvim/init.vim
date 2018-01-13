@@ -21,7 +21,28 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'fholiveira/vim-clojure-static', { 'for': 'clojure', 'branch': 'hack-update'} " Static stuff
 Plug 'hkupty/async-clj-highlight', { 'for': 'clojure', 'branch': 'acid-autocmd' } " Highlight with acid
 Plug 'fuadsaud/vim-midje', { 'branch': 'fix-lispwords' }
+Plug 'clojure-vim/async-clj-omni'
 
+" https://github.com/junegunn/fzf#as-vim-plugin
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+Plug 'Shougo/deoplete.nvim'
+
+" JS highlighting and indent support. Sometimes buggy, but has support for
+" " jsdocs and flow
+Plug 'pangloss/vim-javascript', { 'for': ['javascript']}
+
+"Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+
+"buffer files
+Plug 'Shougo/denite.nvim'
+
+Plug 'Shougo/echodoc.vim'
 call plug#end()
 
 set autoread
@@ -90,3 +111,15 @@ let g:loaded_gzip = 1
 let g:loaded_tarPlugin = 1 " May cause problems with fireplace
 let g:loaded_zipPlugin = 1
 let g:loaded_netrwPlugin = 1
+
+command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
+
+nmap <silent> <Leader>f :Files<CR>
+
+" Enable deoplete at startup
+let g:deoplete#enable_at_startup = 1
+
+"deoplete async-clj-omni config
+let g:deoplete#keyword_patterns = {}
+let g:deoplete#keyword_patterns.clojure = '[\w!$%&*+/:<=>?@\^_~\-\.#]*'
+
